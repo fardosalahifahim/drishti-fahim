@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s forwards;
+            position: relative;
+            z-index: 10;
+            max-width: 90%;
+            margin: 0 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        p {
+            color: #ffa;
+            font-size: 1.5em;
+            margin-top: 20px;
+            border: 2px solid #ff69b4;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInText 2s forwards;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            transform: rotate(45deg);
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            animation: float 4s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff69b4;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: -30px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .heart {
+                width: 15px;
+                height: 15px;
+            }
+
+            .heart:before,
+            .heart:after {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            .heart {
+                width: 10px;
+                height: 10px;
+            }
+
+            .heart:before,
+            .heart:after {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+    <title>I Love You Too, Drishti</title>
+</head>
+<body>
+    <div class="container">
+        <h1>I Love You Too Drosjto</h1>
+        <p>Drishti, you are my world ..jan. Please stay with me for a lifetime and beyond.</p>
+    </div>
+    <div class="heart"></div>
+    <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 80%; animation-delay: 2s;"></div>
+</body>
+</html>
